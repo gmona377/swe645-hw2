@@ -1,0 +1,1 @@
+{"textColorIndex":0,"bgColorIndex":0,"note":"apiVersion: v1\nkind: Service\nmetadata:\n  name: swe645-hw2-service\nspec:\n  type: NodePort\n  selector:\n    app: swe645-hw2\n  ports:\n    - protocol: TCP\n      port: 80\n      targetPort: 80\n      nodePort: 30080"}
