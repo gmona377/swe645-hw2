@@ -1,0 +1,241 @@
+<!--
+Name: Mona Gurung
+Course: SWE 645
+Assignment: Assignment 1
+File: survey.html
+
+This page contains a student survey form for SWE 645 Assignment 1.
+
+I have included: 
+- Name, address, phone number, email, date, 
+- Checkboxes for campus preferences, radio buttons for how the student heard about the university
+- Dropdown list for school recommendation, a raffle input, and a comments section.
+
+Note:
+This is a static page, so the form does not send data anywhere.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Page title displayed in the browser tab -->
+  <title>SWE 645 - Student Survey</title>
+
+  <!-- Character encoding -->
+  <meta charset="UTF-8">
+
+  <!-- Makes the page responsive even on different screen sizes -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- W3.CSS style for layout and styling -->
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+</head>
+
+<body class="w3-light-grey">
+
+<!-- Main page -->
+<div class="w3-content" style="max-width:980px; margin:40px auto;">
+
+  <!-- Button that takes back to the home page -->
+  <a href="index.html"
+     class="w3-button w3-blue w3-round-large w3-hover-dark-blue w3-margin-bottom">
+    ← Back to Home Page
+  </a>
+
+  <!-- Card which holds the survey form -->
+  <div class="w3-card w3-white w3-round-large" style="overflow:hidden;">
+
+    <!-- Blue header section -->
+    <div class="w3-container w3-blue w3-center w3-padding-24">
+      <h2 class="w3-margin-0">Student Survey</h2>
+      <p class="w3-opacity">SWE 645 Assignment 1</p>
+    </div>
+
+    <!-- Form content area -->
+    <div class="w3-container w3-padding-24">
+
+      <!-- Survey form -->
+      <form action="#" method="post">
+
+        <!-- Student information section -->
+        <h3>Student Information</h3>
+        <p class="w3-text-grey">Fields marked with * are required.</p>
+
+        <!-- First and last name -->
+        <div class="w3-row-padding">
+          <div class="w3-half">
+            <label><b>First Name *</b></label>
+            <input class="w3-input w3-border w3-round"
+                   type="text"
+                   name="firstName"
+                   required>
+          </div>
+          <div class="w3-half">
+            <label><b>Last Name *</b></label>
+            <input class="w3-input w3-border w3-round"
+                   type="text"
+                   name="lastName"
+                   required>
+          </div>
+        </div>
+
+        <!-- Street address -->
+        <div class="w3-row-padding w3-margin-top">
+          <div class="w3-col s12">
+            <label><b>Street Address *</b></label>
+            <input class="w3-input w3-border w3-round"
+                   type="text"
+                   name="street"
+                   required>
+          </div>
+        </div>
+
+        <!-- City, state, and zip -->
+        <div class="w3-row-padding w3-margin-top">
+          <div class="w3-half">
+            <label><b>City *</b></label>
+            <input class="w3-input w3-border w3-round"
+                   type="text"
+                   name="city"
+                   required>
+          </div>
+          <div class="w3-quarter">
+            <label><b>State *</b></label>
+            <input class="w3-input w3-border w3-round"
+                   type="text"
+                   name="state"
+                   maxlength="2"
+                   pattern="[A-Z]{2}"
+                   placeholder="VA"
+                   title="Enter exactly 2 uppercase letters"
+                   required>
+          </div>
+          <div class="w3-quarter">
+            <label><b>Zip *</b></label>
+            <input class="w3-input w3-border w3-round"
+                   type="text"
+                   name="zip"
+                   maxlength="5"
+                   pattern="[0-9]{5}"
+                   placeholder="12345"
+                   title="Enter exactly 5 digits"
+                   required>
+          </div>
+        </div>
+
+        <!-- Phone number and email -->
+        <div class="w3-row-padding w3-margin-top">
+          <div class="w3-half">
+            <label><b>Telephone *</b></label>
+            <input class="w3-input w3-border w3-round"
+                   type="tel"
+                   name="phone"
+                   maxlength="12"
+                   placeholder="123-456-7890"
+                   pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                   title="Format must be 123-456-7890"
+                   required>
+          </div>
+          <div class="w3-half">
+            <label><b>Email *</b></label>
+            <input class="w3-input w3-border w3-round"
+                   type="email"
+                   name="email"
+                   required>
+          </div>
+        </div>
+
+        <!-- Date of survey -->
+        <div class="w3-row-padding w3-margin-top">
+          <div class="w3-col s12">
+            <label><b>Date of Survey *</b></label>
+            <input class="w3-input w3-border w3-round"
+                   type="date"
+                   name="surveyDate"
+                   required>
+          </div>
+        </div>
+
+        <hr>
+
+        <!-- Campus preferences with checkboxes -->
+        <h3>What did you like most about the campus?</h3>
+        <p class="w3-text-grey">(You may select more than one.)</p>
+
+        <div class="w3-row-padding">
+          <div class="w3-half">
+            <p><input class="w3-check" type="checkbox" name="likes" value="students"> Students</p>
+            <p><input class="w3-check" type="checkbox" name="likes" value="location"> Location</p>
+            <p><input class="w3-check" type="checkbox" name="likes" value="campus"> Campus</p>
+          </div>
+          <div class="w3-half">
+            <p><input class="w3-check" type="checkbox" name="likes" value="atmosphere"> Atmosphere</p>
+            <p><input class="w3-check" type="checkbox" name="likes" value="dormrooms"> Dorm rooms</p>
+            <p><input class="w3-check" type="checkbox" name="likes" value="sports"> Sports</p>
+          </div>
+        </div>
+
+        <hr>
+
+        <!-- How the student heard about the university -->
+        <h3>How did you become interested in the university?</h3>
+        <p class="w3-text-grey">(Select one.)</p>
+
+        <p><input class="w3-radio" type="radio" name="interest" value="friends" required> Friends</p>
+        <p><input class="w3-radio" type="radio" name="interest" value="television"> Television</p>
+        <p><input class="w3-radio" type="radio" name="interest" value="internet"> Internet</p>
+        <p><input class="w3-radio" type="radio" name="interest" value="other"> Other</p>
+
+        <hr>
+
+        <!-- Recommendation dropdown -->
+        <h3>How likely are you to recommend this school? *</h3>
+        <select class="w3-select w3-border w3-round"
+                name="recommend"
+                required>
+          <option value="" disabled selected>Choose an option</option>
+          <option>Very Likely</option>
+          <option>Likely</option>
+          <option>Unlikely</option>
+        </select>
+
+        <hr>
+
+        <!-- Raffle input -->
+        <h3>Raffle *</h3>
+        <p class="w3-text-grey">
+          Please enter at least 10 comma-separated numbers between 1 and 100, separated by commas.
+          This will be used to decide if the student wins a free movie ticket.
+        </p>
+
+        <input class="w3-input w3-border w3-round"
+               type="text"
+               name="raffle"
+               placeholder="5, 12, 25, 30, 44, 51, 63, 70, 88, 99"
+               required>
+
+        <hr>
+
+        <!-- Additional comments -->
+        <h3>Additional Comments</h3>
+        <textarea class="w3-input w3-border w3-round"
+                  name="comments"
+                  rows="4"></textarea>
+
+        <!-- Submit and cancel buttons -->
+        <div class="w3-center w3-margin-top">
+          <button class="w3-button w3-blue w3-round w3-margin-right" type="submit">
+            Submit
+          </button>
+          <button class="w3-button w3-light-grey w3-round" type="reset">
+            Cancel
+          </button>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

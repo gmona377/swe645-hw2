@@ -1,0 +1,150 @@
+<!--
+Name: Mona Gurung
+Course:so I copy SWE 645
+Assignment: Assignment 1
+File: index.html
+
+I have included:
+- A top navigation bar (Learning / About / Survey)
+- A header image
+- A small “What I’m Learning” section with 4 images
+- A button that links to my survey.html page
+
+Note:
+This is a static website. The Survey link opens survey.html.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Page title for Assignment 1 -->
+  <title>Mona - SWE 645 Assignment 1</title>
+
+  <!-- Character encoding -->
+  <meta charset="UTF-8">
+
+  <!-- Makes the page responsive even on different screen sizes -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- W3.CSS style for layout and styling -->
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+</head>
+
+<body>
+
+<!-- Navigation bar at the top with links to different sections -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+    <!-- Site name changed to SWE645 -->
+    <a href="#home" class="w3-bar-item w3-button"><b>MG</b> SWE645</a>
+
+    <!-- Navigation links -->
+    <div class="w3-right w3-hide-small">
+      <a href="#projects" class="w3-bar-item w3-button">Learning</a>
+      <a href="#about" class="w3-bar-item w3-button">About</a>
+
+      <!-- Link to survey page -->
+      <a href="survey.html" class="w3-bar-item w3-button">Survey</a>
+    </div> 
+  </div>
+</div>
+
+<!-- Header section with a large image and text on top -->
+<header class="w3-display-container w3-content w3-wide"
+        style="max-width:1500px;" id="home">
+
+  <!-- Main header image -->
+  <img class="w3-image" src="header.jpg" alt="Web Development" width="1500" height="800">
+
+  <div class="w3-display-middle w3-margin-top w3-center">
+
+  <h1 class="w3-xxlarge w3-text-black" style="line-height:1.4;" >
+    <span class="w3-padding w3-black w3-opacity-min w3-text-white">
+      <b>Mona Gurung</b>
+    </span>
+    <span>&nbsp; Learning HTML and AWS</span>
+  </h1>
+
+</div>
+
+</header>
+
+<!-- Page content -->
+<div class="w3-content w3-padding" style="max-width:1564px">
+
+  <!-- Project Section -->
+  <div class="w3-container w3-padding-32" id="projects">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">
+      What I’m Learning
+    </h3>
+  </div>
+
+  <!-- This section shows the topics I am currently learning using images -->
+  <div class="w3-row-padding">
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="html.jpg" alt="HTML Basics" style="width:100%">
+      <p>HTML Basics</p>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="css.jpg" alt="CSS Layout" style="width:100%">
+      <p>CSS Layout</p>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="static.jpg" alt="Static Website" style="width:100%">
+      <p>Static Website</p>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="aws.jpg" alt="AWS Hosting" style="width:100%">
+      <p>AWS Hosting</p>
+    </div>
+  </div>
+
+  <!-- About Section -->
+  <div class="w3-container w3-padding-32" id="about">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">About</h3>
+
+    <!-- Assignment description -->
+    <p>
+      This website was created for SWE 645 Assignment 1 to practice basic HTML
+      and static website hosting using AWS.
+    </p>
+    
+    <p>Practicing Git commands for DevOps midterm.</p>
+
+    <p>
+      The student survey page is included to meet the assignment requirements.
+      Please click the Survey link in the menu to open the survey form.
+    </p>
+  </div>
+
+  <!-- Button that links to the student survey page -->
+  <div class="w3-container w3-padding-32" id="survey">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">
+      Student Survey
+    </h3>
+
+    <!-- Button to navigate to survey page -->
+    <a class="w3-button w3-blue w3-round-large w3-hover-dark-blue w3-section" href="survey.html">
+      Go to Survey
+    </a>
+  </div>
+
+<!-- End page content -->
+</div>
+
+<!-- Footer section -->
+<footer class="w3-center w3-black w3-padding-16">
+  <p>© 2026 Mona Gurung | SWE 645 Assignment 1</p>
+
+  <p>
+    Powered by
+    <a href="https://www.w3schools.com/w3css/"
+       target="_blank"
+       class="w3-hover-text-green">
+      w3.css
+    </a>
+  </p>
+</footer>
+
+</body>
+</html>

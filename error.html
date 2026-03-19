@@ -1,0 +1,70 @@
+<!--
+Name: Mona Gurung
+Course: SWE 645
+Assignment: Assignment 1
+File: error.html
+
+This page is displayed when user tries to open page that does not exist.
+
+A short error message is displayed to the user, along with a button to return to the home page.
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Page title -->
+  <title>Page Not Found</title>
+
+  <!-- Character encoding -->
+  <meta charset="UTF-8">
+
+  <!-- Makes the page responsive even on different screen sizes -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- W3.CSS style for layout and styling -->
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+</head>
+
+<body class="w3-light-grey">
+
+<!-- Main page -->
+<div class="w3-content" style="max-width:900px; margin:40px auto;">
+
+  <!-- Button that takes back to the home page -->
+  <a href="index.html"
+     class="w3-button w3-blue w3-round-large w3-margin-bottom">
+    ← Back to Home Page
+  </a>
+
+  <!-- Card box -->
+  <div class="w3-card w3-white w3-round-large">
+
+    <!-- Blue header section that shows the error message -->
+    <div class="w3-container w3-blue w3-center w3-padding-32">
+      <h1>Oops!</h1>
+      <p>Page Not Found</p>
+    </div>
+
+    <!-- Error message section -->
+    <div class="w3-container w3-center w3-padding-32">
+      <p class="w3-large">
+        The page you are trying to visit does not exist.
+      </p>
+
+      <p class="w3-text-grey">
+        Please use the button below to return to the home page.
+      </p>
+
+  <!-- Button that takes back to the home page -->
+      <a href="index.html"
+         class="w3-button w3-blue w3-round-large w3-margin-top">
+        Go to Home Page
+      </a>
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>
