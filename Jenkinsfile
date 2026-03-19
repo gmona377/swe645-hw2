@@ -2,21 +2,22 @@ pipeline {
     agent any
 
     stages {
-        stage('Clone Repo') {
-    steps {
-        git branch: 'main', url: 'https://github.com/gmona377/swe645-hw2.git'
-    }
-}
-
-        stage('Build Docker Image') {
+        stage('Checkout') {
             steps {
-                sh 'docker build -t hw2-app .'
+                git branch: 'main', url: 'https://github.com/gmona377/swe645-hw2.git'
             }
         }
 
-        stage('Run Container') {
+        stage('Build Docker Image') {
             steps {
-                sh 'docker run -d -p 8081:80 hw2-app'
+                sh 'docker build -t mgurung3/hw1-website:latest .'
+            }
+        }
+
+        stage('Deploy to Kubernetes') {
+            steps {
+                sh 'kubectl apply -f deployment.yaml'
+                sh 'kubectl apply -f service.yaml'
             }
         }
     }
