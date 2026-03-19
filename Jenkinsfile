@@ -3,10 +3,10 @@ pipeline {
 
     stages {
         stage('Clone Repo') {
-            steps {
-                git 'https://github.com/gmona377/swe645-hw2.git'
-            }
-        }
+    steps {
+        git branch: 'main', url: 'https://github.com/gmona377/swe645-hw2.git'
+    }
+}
 
         stage('Build Docker Image') {
             steps {
