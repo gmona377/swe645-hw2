@@ -16,7 +16,7 @@ pipeline {
 
         stage('Run Container') {
             steps {
-                sh 'docker run -d -p 8080:80 hw2-app'
+                sh 'docker run -d -p 8081:80 hw2-app'
             }
         }
     }
