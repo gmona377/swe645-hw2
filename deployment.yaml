@@ -2,18 +2,22 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: swe645-hw2-deployment
+  namespace: default
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: swe645-hw2
+      workload.user.cattle.io/workloadselector: apps.deployment-default-swe645-hw2-deployment
   template:
     metadata:
       labels:
-        app: swe645-hw2
+        workload.user.cattle.io/workloadselector: apps.deployment-default-swe645-hw2-deployment
     spec:
       containers:
-        - name: hw1-website
+        - name: container-0
           image: mgurung3/hw1-website:latest
+          imagePullPolicy: Always
           ports:
             - containerPort: 80
+              name: hw2-service
+              protocol: TCP
